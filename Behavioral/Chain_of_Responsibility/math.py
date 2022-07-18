@@ -5,6 +5,7 @@ class Handler(ABC):
     @abstractmethod
     def set_next_chain(self, next):
         pass
+
     @abstractmethod
     def calculate(self):
         pass
