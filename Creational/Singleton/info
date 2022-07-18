@@ -1,0 +1,3 @@
+The singleton design pattern is used when you do not want more than one
+object instantiated.  For example there is only one constitution in the
+United States so we should only have one object.

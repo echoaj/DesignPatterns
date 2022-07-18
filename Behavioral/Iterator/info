@@ -1,0 +1,8 @@
+The definition of the iterator design pattern is that it allows
+for the sequential traversal through a complex data structure
+without exposing its internal details.
+
+The iterator design pattern is mostly implemented in languages like
+java and c++.  In python they already have a __next__ and __iter__
+for creating your own iterator classes.  Plus they already have
+generators.

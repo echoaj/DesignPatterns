@@ -1,0 +1,6 @@
+The adapter design pattern allows for 2 interfaces to work together.
+Ane example is lets say you have a samsung tv interacting with a sony tv.
+They both have similar interfaces with each other, menu, settings ect..
+If we wanted to build one library with 1 implementation for each we
+could do that using the adapter design pattern, other wise we would
+have to create two libraries for the two tvs.

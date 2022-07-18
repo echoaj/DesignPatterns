@@ -1,0 +1,11 @@
+The prototype design pattern is used when you want to test a lot of objects.
+You basically have like a factory design pattern but you return a copy of that object.
+
+It is very useful for example:
+Lets say every time you instantiate an object that object loads its class variables from
+a database.  That takes a minute to load.
+If you want want to create many of those objects you don't want to instantiate each object
+because each object takes a minute to load so instead, the factory will create that object
+when you instantiate the factory. Then you call the factory copy function to send you
+a copy of that object every time you want to reuse that object. Now you don't have to wait
+for that loading time.

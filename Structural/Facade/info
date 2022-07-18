@@ -1,0 +1,18 @@
+The facade design pattern is pretty easy to understand.  Basically
+you just have a bunch of classes interacting with each other.
+Then you create a facade class that takes care of all backend work
+of calling class function, instantiation, ect.. and the client only
+needs to interacts with the facade class instead of all the other
+classes.  Basically the facade class takes care of all the heavy lifting
+so you don't have to.
+
+For example, I made a hotel program that:
+1: gives me a greeting
+2: confirms my reservation number
+3: confirms my ID
+4: Tells me my room number or says I have not been accepted
+
+All those functions are done within those classes.  I don't have
+to interact with those classes because the facade class does that
+for me.  All I have to do is to call the .check_in() function within
+the facade class and I am done.

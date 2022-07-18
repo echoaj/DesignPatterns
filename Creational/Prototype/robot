@@ -1,0 +1,90 @@
+from abc import ABCMeta, ABC, abstractmethod
+import copy
+
+
+class Robot(metaclass=ABCMeta):
+    def __init__(self, rob_name, rob_id):
+        self.name = rob_name
+        self.id = rob_id
+        self.cost = None
+
+    def set_cost(self, rob_cost):
+        self.cost = rob_cost
+
+    @abstractmethod
+    def print_robot(self):
+        pass
+
+
+class Vacuum(Robot):
+    def __init__(self):
+        super(Vacuum, self).__init__("vacuum", 180)
+
+    def print_robot(self):
+        print(f'----- {self.name} ---1--')
+        print(f'ID: {self.id}  COST: {self.cost}\n')
+
+
+class Surgical(Robot):
+    def __init__(self):
+        super(Surgical, self).__init__("surgical", 210)
+
+    def print_robot(self):
+        print(f'----- {self.name} ---2--')
+        print(f'ID: {self.id}  COST: {self.cost}\n')
+
+
+class Industrial(Robot):
+    def __init__(self):
+        super(Industrial, self).__init__("industrial", 585)
+
+    def print_robot(self):
+        print(f'----- {self.name} ---3--')
+        print(f'ID: {self.id}  COST: {self.cost}\n')
+
+
+class RobotFactory:
+    robots = {1:None, 2:None, 3:None}
+
+    def produce(self):
+        self.robots[1] = Vacuum()
+        self.robots[2] = Surgical()
+        self.robots[3] = Industrial()
+
+    def get_robot(self, index):
+        robot = self.robots[index]
+        return copy.copy(robot)
+
+
+rf = RobotFactory()
+rf.produce()
+
+# VACUUM
+vac1 = rf.get_robot(1)
+vac1.set_cost(300)
+vac1.print_robot()
+
+vac2 = rf.get_robot(1)
+vac2.set_cost(350)
+vac2.print_robot()
+
+print()
+# SURGICAL
+sur1 = rf.get_robot(2)
+sur1.set_cost(8000)
+sur1.print_robot()
+
+sur2 = rf.get_robot(2)
+sur2.set_cost(15000)
+sur2.print_robot()
+
+print()
+# INDUSTRIAL
+ind1 = rf.get_robot(3)
+ind1.set_cost(2800)
+ind1.print_robot()
+
+ind2 = rf.get_robot(3)
+ind2.set_cost(1850)
+ind2.print_robot()
+

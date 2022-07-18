@@ -1,0 +1,9 @@
+The state design pattern is used when you want objects to switch to different
+states.  Objects will change their behaviour based on the state they are in.
+Changing states can be denied as well.
+
+For example:
+A car when off can only turn on.  But when it is on, it can turn off or it
+can drive. On, off, and drive are states.  In order to drive you must turn on
+the car.  So if you try to switch the state form off to drive, you will be
+denied.  This pattern is useful for organizing code.

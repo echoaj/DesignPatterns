@@ -1,0 +1,16 @@
+The decorator design pattern is used when you want to modify objects
+at run time.  It can be used to extend old code instead of rewriting it.
+
+In my example I have a pizza that can have toppings added on to it.
+Basically a decorator design patter will have objects within
+objects within objects.  You are in a sense decorating an object with
+more functionality or attributes.  In this case, doing:
+
+basicPizza = TomatoSauce(Mozzarella(PlainPizza()))
+
+is decorating the plain pizza with mozzarella and tomato sauce.
+
+You will have a TomatoSauce object with a mozzarella object in it
+with a plain pizza object in it.  When you call get_cost() for example,
+the get_cost functions within each object is called and the totals added
+up.

@@ -1,0 +1,13 @@
+The flyweight design pattern aims to decrease the amount of
+memory usage when creating objects by reusing ones with similar
+attributes.
+
+First you have a class that does not change, in my case it was a
+square class with square attributes.
+
+Then you have a factory class that contains a dictionary.
+A function with a color parameter checks to see if that square object
+already exists within the dictionary.  If it does, it will return the
+square so you can reuse it.  Otherwise, it will create a new square and
+later on if you create that same square with the color that square will
+be reused.

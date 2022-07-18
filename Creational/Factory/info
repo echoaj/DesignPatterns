@@ -1,0 +1,4 @@
+The Factory Method design pattern is used when you want to make a lot of different type
+of objects.  Typically, this design pattern starts with a base class and any number
+of child classes.  Then you have a Factory class that will chose which object to
+return based on input you give it.  The example I made was with a tower defense game.

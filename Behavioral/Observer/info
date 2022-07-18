@@ -1,0 +1,14 @@
+The idea of the observer design pattern is to update multiple classes
+or objects when a subject or one of its attributes has changed.
+
+For example a youtube channel should notify all of its subscribers
+when a new video is posted.
+
+This design pattern consists of observers and a subject.  In this case,
+The youtube channel would be the subject and the subscribers would
+be the observers.
+
+I also made another program that converts a decimal to hexadecimal,
+octal, and binary.  In that case, the decimal class is the subject
+and the hex, oct, and bin classes are the observers waiting
+for the decimal's convert function to update.

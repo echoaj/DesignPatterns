@@ -1,0 +1,6 @@
+The Chain of Responsibility Design Pattern aims to assign each class a particular
+job.  The job is given by a handler interface.  Each class signals the proceeding
+class to do it's job after the current class is done.  In some cases like in
+math.py, the chain of responsibility is executed until a particular job is found
+and executed whereas in atm.py each class performs a task until all objects are done
+executing.
