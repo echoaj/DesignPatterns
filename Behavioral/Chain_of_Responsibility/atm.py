@@ -36,7 +36,6 @@ class ATM:
 
 
 class DispenseHundreds(ATMHandler):
-    next_event = None
     fifties = None
 
     def set_next_chain(self, next_chain):
@@ -49,7 +48,6 @@ class DispenseHundreds(ATMHandler):
 
 
 class DispenseFifties(ATMHandler):
-    next_event = None
     twenties = None
 
     def set_next_chain(self, next_chain):
@@ -62,7 +60,6 @@ class DispenseFifties(ATMHandler):
 
 
 class DispenseTwenties(ATMHandler):
-    next_event = None
     tens = None
 
     def set_next_chain(self, next_chain):
@@ -75,7 +72,6 @@ class DispenseTwenties(ATMHandler):
 
 
 class DispenseTens(ATMHandler):
-    next_event = None
     output = None
 
     def set_next_chain(self, next_chain):
