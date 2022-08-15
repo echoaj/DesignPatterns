@@ -7,7 +7,7 @@ The last step of the process is to fill the schedule with the highest ranking op
 
 # Class & Rank
 options = {'Art': 0, 'Math': 0, 'English': 0, 'History': 0, 'Geography': 0, 'Physics': 0}
-optionsData = {'Art': 0, 'Math': 0, 'English': 0, 'History': 0, 'Geography': 0, 'Physics': 0}
+optionsData = {'Art': 0, 'Math': ["period required of subject", 0], 'English': 0, 'History': 0, 'Geography': 0, 'Physics': 0}
 schedule = {"Name": [None, None, None, None, None]}
 
 
@@ -47,7 +47,7 @@ class Student:
         self.challengeDesired = 7
 
 
-class GeneralInfo:
+class GeneralInfo(ScheduleHandler):
     next_calculation = None
 
     def set_next_calculation(self, next_calc):

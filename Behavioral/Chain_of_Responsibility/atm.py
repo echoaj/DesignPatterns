@@ -89,8 +89,8 @@ fif = DispenseFifties()
 twe = DispenseTwenties()
 ten = DispenseTens()
 
-hun.set_next_chain(fif)
-fif.set_next_chain(twe)
+hun.set_next_chain(twe)
+twe.set_next_chain(twe)
 twe.set_next_chain(ten)
 ten.set_next_chain(request)
 
